@@ -1,2 +1,7 @@
+# Node
 node_modules
+
+# OS
+.DS_Store
+
 cv_pedro_monteagudo.pdf
