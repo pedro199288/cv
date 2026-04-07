@@ -2,9 +2,10 @@
   "name": "curriculum",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "pdf": "node generate-pdf.js",
+    "check:pdf": "npm run pdf && node -e \"const fs=require('fs');const file='cv_pedro_monteagudo.pdf';if(!fs.existsSync(file)){console.error('Missing '+file);process.exit(1)};const size=fs.statSync(file).size;if(size===0){console.error(file+' is empty');process.exit(1)};console.log('OK '+file+' ('+size+' bytes)')\"",
+    "test": "npm run check:pdf"
   },
   "keywords": [],
   "author": "",
